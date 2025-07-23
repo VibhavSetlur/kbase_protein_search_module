@@ -1,0 +1,47 @@
+#
+# Protein Existence Checker App Display
+#
+name: Check Protein Existence
+
+tooltip: |
+    Quickly check if a UniProt protein exists in the KBase Protein Network and view its family and metadata.
+
+screenshots: []
+
+icon: search.png
+
+suggestions:
+    apps:
+        related:
+            [GenerateProteinEmbeddings, FindTopMatchesFromEmbedding]
+        next:
+            [GenerateProteinEmbeddings]
+    methods:
+        related:
+            []
+        next:
+            ["GenerateProteinEmbeddings"]
+
+parameters :
+    protein_id :
+        ui-name : UniProt ID (exact match)
+        short-hint : Enter a UniProt ID to check for an exact match in the protein HDF5 files.
+        long-hint  : Enter a valid UniProt accession (e.g., P12345). The search is an exact match in the database.
+
+description : |
+    <p>Enter a UniProt ID to check if it exists in the protein HDF5 files. The app performs an <b>exact match</b> for the UniProt ID. If found, you will see its family, metadata, and the protein embedding.</p>
+    <ul>
+    <li><b>Input:</b> UniProt protein ID (e.g., P12345)</li>
+    <li><b>Output:</b> Existence status, family ID, metadata, and embedding</li>
+    </ul>
+    <p>This app returns the protein embedding if the UniProt ID is found by exact match in the database.</p>
+
+publications :
+    -
+        display-text: |
+            KBase Protein Network Analysis Toolkit Documentation
+        link: https://github.com/kbaseapps/kbase_protein_network_analysis_toolkit
+    -
+        display-text: |
+            UniProt: a worldwide hub of protein knowledge
+        link: https://www.uniprot.org/ 
